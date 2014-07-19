@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* styles.scss*/
+/*---------------------------------*/
+/*  	 Sami Stumeier styles      */
+/*---------------------------------*/
+/*____________Colors____________*/
+/*____________Fonts____________*/
+@font-face {
+  font-family: "Sail";
+  src: url(../fonts/sail.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato_reg.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 100;
+  src: url(../fonts/lato_lig.otf) format("truetype");
+}
+
+/*____________Values____________*/
+/*__________Basic styles__________*/
+/* line 51, sass/styles.scss */
+html {
+  height: 100%;
+}
+
+/* line 54, sass/styles.scss */
+body {
+  background-image: url(../img/sami_bg.png);
+  background-repeat: repeat;
+  -webkit-appearance: none;
+  height: 100%;
+}
+
+/* line 60, sass/styles.scss */
+body.frame {
+  background: none;
+}
+
+/* line 63, sass/styles.scss */
+h1 {
+  color: #5277b6;
+  font-family: Sail;
+  cursor: default;
+  font-size: 88px;
+  font-weight: normal;
+}
+
+/* line 72, sass/styles.scss */
+h2 {
+  font-family: lato;
+  font-weight: normal;
+  font-size: 34px;
+  cursor: default;
+}
+
+/* line 78, sass/styles.scss */
+p {
+  color: #363636;
+  font-family: lato;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 86, sass/styles.scss */
+a {
+  color: #5277b6;
+  text-decoration: none;
+  cursor: pointer;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/* line 95, sass/styles.scss */
+a:hover {
+  color: #fc405e;
+}
+
+/*____________Structure____________*/
+/* line 102, sass/styles.scss */
+.header {
+  height: 440px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 107, sass/styles.scss */
+.header h1 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 114, sass/styles.scss */
+.hide {
+  display: none;
+}
+
+/* line 118, sass/styles.scss */
+.box {
+  height: 330px;
+  position: relative;
+  text-align: center;
+}
+/* line 122, sass/styles.scss */
+.box img {
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: 0;
+}
+/* line 128, sass/styles.scss */
+.box h2 {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+}
+
+/* line 135, sass/styles.scss */
+.inner {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*____________Content Boxes____________*/
+/* line 143, sass/styles.scss */
+.sis {
+  background-color: #7396d8;
+}
+/* line 145, sass/styles.scss */
+.sis img {
+  max-width: 173px;
+}
+/* line 148, sass/styles.scss */
+.sis h2 {
+  color: #2e5894;
+  right: 50%;
+}
+
+/* line 153, sass/styles.scss */
+.rn {
+  background-color: #5277b6;
+}
+/* line 155, sass/styles.scss */
+.rn img {
+  max-width: 171px;
+  right: 55%;
+}
+/* line 159, sass/styles.scss */
+.rn h2 {
+  color: #003e77;
+  left: 55%;
+}
+
+/* line 164, sass/styles.scss */
+.xfit {
+  background-color: #325b97;
+}
+/* line 166, sass/styles.scss */
+.xfit img {
+  width: 50%!important;
+  max-width: 346px;
+}
+/* line 170, sass/styles.scss */
+.xfit h2 {
+  color: #00295e;
+  right: 50%;
+}
+
+/* line 175, sass/styles.scss */
+.contact {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  height: 330px;
+}
+/* line 180, sass/styles.scss */
+.contact p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*____________Form____________*/
+/* line 189, sass/styles.scss */
+textarea, input {
+  width: 100%;
+  font-size: 18px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+/* line 202, sass/styles.scss */
+.divExpand {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  margin-top: -50px;
+  margin-bottom: 40px;
+}
+
+/* line 209, sass/styles.scss */
+.form {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+/* line 214, sass/styles.scss */
+textarea.formComment {
+  border-radius: 2px;
+  padding: 5px;
+}
+
+/* line 218, sass/styles.scss */
+input.formName, input.formEmail {
+  height: 28px;
+  padding: 5px;
+}
+
+/* line 222, sass/styles.scss */
+input.formSend {
+  background-color: #fc405e;
+  font-size: 19px;
+  height: 35px;
+  color: white;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 500ms ease-out;
+  -moz-transition: background-color 500ms ease-out;
+  -o-transition: background-color 500ms ease-out;
+  transition: background-color 500ms ease-out;
+}
+/* line 234, sass/styles.scss */
+input.formSend:hover {
+  background-color: #fb0e34;
+  cursor: pointer;
+}
+/* line 239, sass/styles.scss */
+input.formSend:active {
+  margin-top: 3px;
+  margin-bottom: 7px;
+}
+
+/*____________Thank you message____________*/
+/* line 245, sass/styles.scss */
+.thanksDiv {
+  margin-left: 35%;
+  float: left;
+}
+
+/* line 250, sass/styles.scss */
+.thanks {
+  color: #fc405e;
+  font-size: 33px;
+  line-height: 33px;
+  margin-top: 60px;
+  animation: fadeOut 3.5s;
+  -moz-animation: fadeOut 3.5s;
+  /* Firefox */
+  -webkit-animation: fadeOut 3.5s;
+  /* Safari and Chrome */
+  -o-animation: fadeOut 3.5s;
+  /* Opera */
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 262, sass/styles.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 264, sass/styles.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  /* line 270, sass/styles.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 274, sass/styles.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  /* line 280, sass/styles.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 283, sass/styles.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 288, sass/styles.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 291, sass/styles.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/*____________Footer____________*/
+/* line 297, sass/styles.scss */
+.footer {
+  background-color: #363636;
+  height: 55px;
+  text-align: right!important;
+}
+/* line 301, sass/styles.scss */
+.footer p {
+  color: #818181;
+  font-size: 12px;
+  padding-top: 22px;
+  line-height: 12px;
+}
+
+/*____________Media Queries____________*/
+@media (max-width: 641px) {
+  /* line 311, sass/styles.scss */
+  h1 {
+    font-size: 60px;
+  }
+
+  /* line 314, sass/styles.scss */
+  .box {
+    height: 310px;
+  }
+
+  /* line 317, sass/styles.scss */
+  .header {
+    height: 300px;
+  }
+
+  /* line 320, sass/styles.scss */
+  .xfit img {
+    max-width: 346px;
+    left: 45%;
+  }
+}

@@ -1,0 +1,324 @@
+/* styles.scss*/
+@charset "UTF-8";
+
+/*---------------------------------*/
+/*  	 Sami Stumeier styles      */
+/*---------------------------------*/
+
+
+/*____________Colors____________*/
+
+$header		 : #3B8183;
+$blue1		 : #7396d8;
+$blue1t		 : #2e5894;
+$blue2		 : #5277b6;
+$blue2t		 : #003e77;
+$blue3		 : #325b97;
+$blue3t		 : #00295e;
+$footer		 : #818181;
+$white		 : #ffffff;
+$dark		 : #363636;
+$form        : #f5f5f5;
+$formButton  : #FC405E;
+
+
+/*____________Fonts____________*/
+
+@font-face {
+    font-family: "Sail";
+    src: url(../fonts/sail.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/lato_reg.otf) format("truetype");
+}
+@font-face {
+    font-family: "Lato";
+    font-weight: 100;
+    src: url(../fonts/lato_lig.otf) format("truetype");
+}
+
+
+/*____________Values____________*/
+
+
+$boxHeight	: 330px;
+
+
+/*__________Basic styles__________*/
+
+html {
+	height: 100%;
+}
+body {
+	background-image: url(../img/sami_bg.png);
+	background-repeat: repeat;
+	-webkit-appearance: none;
+	height: 100%;
+}
+body.frame{
+	background: none;
+}
+h1 {
+	color: $blue2;
+	font-family: Sail;
+	cursor: default;
+	font-size: 88px;
+	font-weight: normal;
+	
+}
+
+h2{
+	font-family: lato;
+	font-weight: normal;
+	font-size: 34px;
+	cursor: default;
+}
+p {
+	color: $dark;
+	font-family: lato;
+	font-weight: 100;
+	font-size: 24px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+a {
+	color:$blue2;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+	text-decoration: none;
+	cursor: pointer;
+	 -o-transition:.5s;
+	  -ms-transition:.5s;
+	  -moz-transition:.5s;
+	  -webkit-transition:.5s;
+	  transition:.5s;
+   &:hover{
+	   color: $formButton;
+   }
+}
+
+/*____________Structure____________*/
+
+.header{
+	height: 440px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	h1{
+		display: table-cell; 
+		vertical-align: middle; 
+		text-align: center; 
+	}
+}
+
+.hide{
+	display: none;
+}
+
+.box {
+	height: $boxHeight;
+	position: relative;
+	text-align: center;
+	img{
+		position: absolute; 
+		bottom: 0;
+		width: 40%;
+		z-index: 0;
+	}
+	h2{
+		position: absolute; 
+		bottom: 15px;
+		z-index: 1;
+	}
+}
+
+.inner{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*____________Content Boxes____________*/
+
+.sis {
+	background-color: $blue1;
+	img{
+		max-width: 173px;
+	}
+	h2{
+		color: $blue1t;
+		right:50%;
+	}
+}
+.rn{
+	background-color: $blue2;
+	img{
+		max-width: 171px;
+		right:55%;
+	}
+	h2{
+		color: $blue2t;
+		left:55%;
+	}
+}
+.xfit{
+	background-color: $blue3;
+	img{
+		width:50%!important;
+		max-width: 346px;
+	}
+	h2{
+		color: $blue3t;
+		right: 50%
+	}
+}
+.contact{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	height: 330px;
+	p{
+		display: table-cell; 
+		vertical-align: middle; 
+		text-align: center; 
+	}
+}
+
+/*____________Form____________*/
+
+textarea, input{
+	width: 100%;
+	font-size: 18px;
+	padding-top: 0px;
+	margin-bottom: 10px;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: $white;
+	border: none;
+	border-radius: 2px;
+}
+.divExpand{
+	margin-left: auto;
+	margin-right:auto;
+	max-width: 400px;
+	margin-top: -50px;
+	margin-bottom: 40px;
+}
+.form{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+textarea.formComment{
+	border-radius: 2px;
+	padding:5px;
+}
+input.formName, input.formEmail{
+	height:28px;
+	padding:5px;
+}
+input.formSend{
+	background-color:$formButton;
+	font-size:19px;
+	height: 35px;
+	color:$white;
+	border-radius:4px;
+	-webkit-appearance: none;
+	-webkit-transition: background-color 500ms ease-out;
+	-moz-transition: background-color 500ms ease-out;
+	-o-transition: background-color 500ms ease-out;
+	transition: background-color 500ms ease-out; 
+	
+	&:hover{
+	background-color:darken($formButton,10%);
+	cursor:pointer;
+	}
+	
+	&:active{
+	margin-top:3px;
+	margin-bottom:7px;}
+}
+/*____________Thank you message____________*/
+
+.thanksDiv{
+	margin-left: 35%;
+	float: left;	
+}
+
+.thanks{
+	color: $formButton;
+	font-size: 33px;
+	line-height: 33px;
+	margin-top: 60px;	
+	animation: fadeOut 3.5s;
+    -moz-animation: fadeOut 3.5s; /* Firefox */
+    -webkit-animation: fadeOut 3.5s; /* Safari and Chrome */
+    -o-animation: fadeOut 3.5s; /* Opera */
+    opacity: 0;
+}
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}	
+	100% {
+		opacity: 0;
+	}
+}
+/*____________Footer____________*/
+
+.footer{
+	background-color: $dark;
+	height: ($boxHeight/6);
+	text-align: right!important;
+	p{
+	color: $footer;
+	font-size: 12px;
+	padding-top: 22px;
+	line-height: 12px;
+	}
+}
+/*____________Media Queries____________*/
+@media (max-width: 641px){
+
+	h1{
+		font-size: 60px;
+	}
+	.box{
+		height: 310px;
+	}
+	.header{
+		height: 300px;
+	}
+	.xfit img{
+		max-width: 346px;
+		left: 45%;
+	}
+}
